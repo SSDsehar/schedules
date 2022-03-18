@@ -1,0 +1,17 @@
+.resizable_div {
+    border: 1px solid red;
+    white-space: nowrap;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 50px;
+    padding: 5px;
+    resize: horizontal;
+    cursor: col-resize;
+    min-width: 50px;
+    max-width: 150px;
+    direction: ltr;
+  }
+  
