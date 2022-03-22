@@ -3,18 +3,21 @@
 		<tr>
 			<td>
 				<input matInput #creneauDebut type="time" [ngModel]="timeCreneau[0] | toHourFormat" (ngModelChange)="updateCreneauON(creneauDebut.value)" [disabled]="!modifiable">
-				
+
 			</td>
 			<td>
-				
+
 					<input  #creneauFin type="time" [ngModel]="timeCreneau[1] | toHourFormat" (ngModelChange)="updateCreneauOFF(creneauFin.value)" [disabled]="modifiable">
-				
+
 			</td>
 		</tr>
 	</table>
 </div>
 <br/>
 <br/>
-<div class="sliderTest">
+<!-- <div class="sliderTest">
 	<nouislider #slider  [(ngModel)]="timeCreneau" style="margin-bottom: 5rem" [disabled]="modifiable"></nouislider>
+</div> -->
+<div class="sliderTest">
+	<nouislider #slider [config]="someTimeConfig" [ngModel]="timeCreneau"   (ngModelChange)="timeCreneau = $event"   style="margin-bottom: 5rem" [disabled]="modifiable"></nouislider>
 </div>

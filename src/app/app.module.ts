@@ -15,6 +15,7 @@ import { SecondToHourPipe } from './time-slider-simple/second-hour.pipe';
 import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TimeComponent } from './time/time.component';
 import { TestComponent } from './test/test.component';
+import { NouisliderModule } from 'ng2-nouislider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +23,6 @@ import { TestComponent } from './test/test.component';
     SecondToHourPipe,
     TimeComponent,
     TestComponent
-  
-    
   ],
   imports: [
     Ng5SliderModule,
@@ -31,10 +30,10 @@ import { TestComponent } from './test/test.component';
     BrowserModule,
     NgxSliderModule,
     AppRoutingModule,
+    NouisliderModule,
     FormsModule,
     DragToSelectModule.forRoot()
   ],
-  providers: [DatePipe],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -12,19 +12,22 @@ import * as moment from 'moment';
 })
 export class AppComponent {
   title = 'schedules';
-  modification: boolean = true;
- 
-  ngOnInit() {
+
+  public modification!: boolean;
+
+  ngOnInit(){
     this.modification = false;
   }
   name = 'Angular 5';
+
   public changerModeModification(){
     console.log("changerModeModification")
     this.modification= !this.modification;
     console.log(this.modification);
   }
 
- 
+
+
 }
 
 
